@@ -38,3 +38,19 @@ function markDistanceAndPredecessor(node, adjacentNodes) {
     adjNode.distance = node.distance + 1;
   });
 }
+
+function findAdjacent(rootNode, vertices, edges) {
+  let links = edges.filter(edge => edge.includes(rootNode));
+  links = links.flat();
+  console.log(links);
+}
+
+function findNode(nodeName, vertices) {
+  for (let i=0; i<vertices.length; i++) {
+    if (vertices[i].name === nodeName) {
+      return vertices[i];
+    } else {
+      return false;
+    }
+  }
+}
